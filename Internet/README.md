@@ -1,11 +1,21 @@
-### How do I start to design my website?
+# Internet
+---
+
+## How does the internet work?
+https://developer.mozilla.org/ko/docs/Learn/Common_questions/How_does_the_Internet_work#%EC%9A%94%EC%95%BD
+
+인터넷은 웹의 핵심적인 기술이다. 컴퓨터가 통신을 하기 위해서는 물리적으로 연결하여 네트워크를 구성한다. 각각의 컴퓨터를 하나씩 연결할 수 없으므로 각 컴퓨터를 라우터에 연결한다. 하지만 국가와 국가 사이처럼 아주 먼 곳을 모두 연결하기는 어렵기에 이미 설치된 전화기 기반의 시설을 이용해야 하며, 네트워크와 전화 시설을 연결하기 위해서는 모뎀이 필요하다. 그렇게 네트워크가 전화 시설에 연결된다. 자신의 컴퓨터가 이러한 네트워크에 도달하기 위해서는 몇몇 특수한 라우터를 관리하는 인터넷 서비스 제공 업체(ISP)를 통해 연결되어야 한다. 이렇게 전체 네트워크가 구성된다.
+
+서로의 컴퓨터에 메시지를 보내기 위해서는 각 컴퓨터의 고유 주소가 필요하다. 이를 IP라고 하며, 점으로 구분된 4개의 숫자(ex. 192.168.2.10)로 구성된다. 하지만 숫자를 기억하기 어렵기 때문에, 좀 더 기억하기 쉬운 도메인 주소(ex. 'google.com')를 이용해 인터넷을 사용한다.
+
+즉 웹 브라우저를 이용해 인터넷을 탐색하기 위해서는 도메인 주소를 이용하여 웹 사이트에 접속한다. 주인의할 것은 웹과 인터넷은 같지 않다는 것이다. 인터넷은 수삽억 대의 컴퓨터를 연결하기 위한 인프라이고, 웹은 그 인프라 위에 구축된 서비스이다.
+
+**How do I start to design my website?**
 
 프로젝트를 시작할 때, 내가 정확히 달성하고자 하는 목표가 무엇인지 고민해야 한다.
 어떤 것을 구현할지, 어떤 서비스를 제공할지, 어떤 디자인을 만들어야 할지, 목표와 목표를 달성하기 위해 해야할 것을 나열해보자.
 기술은 그 다음이다.
-
-# How does the internet work?
-https://developer.mozilla.org/ko/docs/Learn/Common_questions/How_does_the_Internet_work#%EC%9A%94%EC%95%BD
-
-인터넷은 웹의 핵심적인 기술이다.
 ---
+
+## What is HTTP?
+https://developer.mozilla.org/ko/docs/Web/HTTP/Overview
