@@ -10,7 +10,7 @@ https://developer.mozilla.org/ko/docs/Learn/Common_questions/How_does_the_Intern
 
 즉 웹 브라우저를 이용해 인터넷을 탐색하기 위해서는 도메인 주소를 이용하여 웹 사이트에 접속한다. 주인의할 것은 웹과 인터넷은 같지 않다는 것이다. 인터넷은 수삽억 대의 컴퓨터를 연결하기 위한 인프라이고, 웹은 그 인프라 위에 구축된 서비스이다.
 
-**How do I start to design my website?**
+*How do I start to design my website?*
 
 프로젝트를 시작할 때, 내가 정확히 달성하고자 하는 목표가 무엇인지 고민해야 한다.
 어떤 것을 구현할지, 어떤 서비스를 제공할지, 어떤 디자인을 만들어야 할지, 목표와 목표를 달성하기 위해 해야할 것을 나열해보자.
