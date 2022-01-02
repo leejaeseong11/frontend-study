@@ -97,3 +97,5 @@ HTML 문서에 그림을 그리기 위해 캔버스 요소를 사용한다. 그�
 ---
 ## DNS and how it wokrs?
 https://aws.amazon.com/ko/route53/what-is-dns/
+
+DNS란 사람이 읽을 수 있는 도메인 이름을 머신이 읽을 수 있는 IP 주소로 변환하는 것 혹은 그 반대의 변환을 수행하는 시스템이다.
