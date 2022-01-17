@@ -136,7 +136,7 @@ https://www.one.com/en/hosting/what-is-web-hosting
 
 AWS, Azure, Google Cloud 등 어떤 VPS 서비스를 이용할지 가성비를 잘 따져서 선택해야 한다. ([VPSBenchmarks](https://www.vpsbenchmarks.com/)) VPS뿐 아니라 데이터베이스를 관리하기 위한 시스템 등 모든 서비스가 마찬가지이다.
 
-여러 유용한 서비스를 기록한다.
+여러 유용한 서비스가 있으니, 개발 시 이용할 것이 있을지 잘 찾아본다.
 - Netfify: 정적 웹 사이트를 위한 호스팅 및 서버리스 백엔드 서비스를 제공한다.
 - imgix: 이미지 최적화 서비스를 제공한다.
 - Cloudinary: imgix와 마찬가지로 비디오, 이미지를 관리하기 위한 서비스이다. 가격 측정 방식이 imgix보다 덜 투명하기 때문에 구현하고자 하는 서비스에 적절할지 잘 고려해야 한다.
