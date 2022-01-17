@@ -11,4 +11,16 @@ https://roadmap.sh/frontend
 - [Browsers and how they work?](https://github.com/leejaeseong11/frontend-study/tree/main/Internet#browsers-and-how-they-work)
 - [DNS and how it wokrs?](https://github.com/leejaeseong11/frontend-study/tree/main/Internet#dns-and-how-it-wokrs)
 - [What is domain name?](https://github.com/leejaeseong11/frontend-study/tree/main/Internet#what-is-domain-name)
-- What is hosting?
+- [What is hosting?](https://github.com/leejaeseong11/frontend-study/tree/main/Internet#what-is-hosting)
+
+---
+
+2. HTML
+- Learn the basics
+- Writing Semantic HTML
+- Forms and Validation
+- Conventions and Best Practices
+- Accessibility
+- SEO Basics
+
+---
