@@ -15,8 +15,8 @@ https://roadmap.sh/frontend
 
 ---
 
-2. HTML
-- Learn the basics
+2. [HTML](https://github.com/leejaeseong11/frontend-study/tree/main/HTML#html)
+- [Learn the basics](https://github.com/leejaeseong11/frontend-study/tree/main/HTML#learn-the-basics)
 - Writing Semantic HTML
 - Forms and Validation
 - Conventions and Best Practices
