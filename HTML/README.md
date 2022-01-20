@@ -3,7 +3,7 @@
 ## Learn the basics
 https://www.w3schools.com/html/html_intro.asp
 
-코드 👉 [HTML Tutorial](https://github.com/leejaeseong11/frontend-study/tree/main/HTML/HTML%20Tutorial)
+코드 👉 [HTML Basics](https://github.com/leejaeseong11/frontend-study/tree/main/HTML/HTML%20Basics)
 
 HTML(Hyper Text Markup Language)은 웹 페이지를 만들기 위한 표준 마크업 언어이다. HTML 요소는 시작 태그, 요소의 내용, 종료 태그로 정의된다.
 
@@ -14,4 +14,3 @@ HTML(Hyper Text Markup Language)은 웹 페이지를 만들기 위한 표준 마
     - Format On Save 옵션을 키면 저장할 때마다 포맷을 맞춰준다.
 
 
-(HTML 편집기 볼 차례)
