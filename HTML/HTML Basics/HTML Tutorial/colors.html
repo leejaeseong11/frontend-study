@@ -1,0 +1,49 @@
+<!--
+  HTML 색상은 미리 정의된 색상 이름, RGB, HEX, HSL, RGBA, HLSA 값으로 지정 가능하다.
+  색상 이름은 tomato, orange, dodgerblue 등 140개가 있다.
+  (색상 이름: https://www.w3schools.com/colors/colors_names.asp)
+
+  background-color로 배경색을 설정한다.
+  color로 텍스트 색상을 설정한다.
+  border로 테두리를 설정한다.
+
+  각 색상 정의 방법 예시:
+  RGB: RGB(255, 99, 71)
+  HEX: #ff6347
+  HSL: hsl(9, 100%, 64%)
+  RGBA: RGBA(255, 99, 71, 0.5)
+  HSLA: hsla(9, 100%, 64%, 0.5)
+
+  RGB는 RGB(빨강, 초록, 파랑)으로 지정하며, 각 값은 0~255 사이의 값을 갖는다.
+  회색 음영을 표기하고 싶다면 세 개의 값을 똑같이 해주면 되고, 검은색은 0, 흰색은 1에 가깝게 설정하면 된다.
+  RGBA는 RGB에 투명도를 추가한 것이다. 0이 완전 투명, 1이 불투명으로 그 사이의 값을 갖는다.
+
+  16진수 색상인 HEX는 #RRGGBB와 같은 형태로 지정하며 RR, GG, BB는 00~FF 사이의 16진수 값이다. 
+
+  HSL은 HSL(채도, 색도, 밝기)로 표현한다.
+  색조는 0~360의 색상환 정도로 0은 빨강, 120은 초록, 240은 파랑이다.
+  채도는 백분율로 0%는 회색, 100%는 전체 색상이다.
+  밝기도 백분율로 0%가 검정, 100%는 흰색이다.
+-->
+
+<!DOCTYPE html>
+<html>
+  <body>
+    <h1 style="background-color: crimson">hello world!</h1>
+    <p style="background-color: cyan">
+      hello world는 처음 프로그래밍을 시작할 때 사용되는...
+    </p>
+
+    <h1 style="color: rgb(20, 207, 220)">hello world!</h1>
+    <p style="background-color: rgb(173, 0, 116)">
+      hello world는 처음 프로그래밍을 시작할 때 사용되는
+    </p>
+    <p style="background-color: rgb(173, 231, 116)">
+      예시 문장으로 자주 사용된다.
+    </p>
+
+    <h1 style="border: 2px solid tomato">hello world!</h1>
+    <h1 style="border: 2px solid chocolate">hello world!</h1>
+    <h1 style="border: 2px solid blanchedalmond">hello world!</h1>
+  </body>
+</html>

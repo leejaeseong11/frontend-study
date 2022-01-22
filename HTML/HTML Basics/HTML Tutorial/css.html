@@ -1,0 +1,42 @@
+<!--
+  CSS는 Cascading Style Sheets의 약자로 웹 페이지의 레어아웃 형식을 지정하는데 사용한다.
+  CSS는 많은 작업을 절약하여, 한 번에 여러 웹 페이지의 레이아웃을 제어할 수 있다.
+  CSS는 3가지 방법으로 HTML 문서에 추가할 수 있다.
+  - 인라인: HTML 요소 내 style 속성 사용
+  - 내부: 섹션의 <style> 요소 사용, <head> 내에 지정해서 사용
+  - 외부: <link> 요소를 사용하여 외부 CSS 파일에 연결
+
+  앞서 HTML에서 style 속성을 실습했을 때처럼 CSS도 글꼴 폰트, 사이즈 등 모든 설정이 동일하게 가능하다.
+  border로 테두리를 설정한다.
+  padding으로 테두리 사이 공백을 설정한다.
+  margin으로 테두리 밖의 공백을 설정한다.
+
+  전체 URL 시트로 외부 CSS를 불러 올 수도 있다.
+
+  적용 우선 순위는 인라인 > 내부 > 외부 순서이다.
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://www.w3schools.com/html/styles.css" />
+    <style>
+      body {
+        background-color: orange;
+      }
+      h2 {
+        color: purple;
+        border: 2px solid purple;
+        padding: 10px;
+        margin: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 style="color: blue">파란색 헤드</h1>
+    <p style="color: red">빨간색 문단</p>
+    <h2>내부 CSS 설정</h2>
+    <h3>외부 CSS 설정</h3>
+    <h1>외부에서 불러온 헤드 설정</h1>
+  </body>
+</html>

@@ -1,0 +1,123 @@
+<!--
+  링크를 통해 사용자는 페이지에서 페이지로 이동할 수 있다.
+  HTML 링크는 하이퍼링크이다.
+  <a> 태그의 href 속성으로 하이퍼링크를 정의한다.
+  방문하지 않은 링크는 밑줄과 파란색, 방문한 링크는 밑줄과 보라색, 활성 링크는 밑줄과 빨간색으로 표시된다.
+
+  target 속성으로 창을 어떻게 열지 결정할 수 있다.
+  - _self: 클릭한 것과 동일한 창/탭에서 열기
+  - _blank: 새 창이나 탭에서 열기
+  - _parent: 부모 프레임에서 열기, 부모 프레임이란 이전 창을 의미
+  - _top: 창의 전체 본문에서 열기, 열려 있는 창 중에서 가장 위에 있는 창에서 여는 것
+
+  링크도 마찬가지로 절대 URL, 상대 URL 다 열 수 있다.
+  이미지를 링크로 사용할 수 있다.
+  
+  href 속성 내부에서 mailto 를 이용해 사용자의 이메일 프로그램을 여는 링크를 생성할 수 있다.
+
+  자바스크립트 코드를 추가해 버튼 클릭 시 링크로 이동할 수도 있다.
+
+  style을 이용해 상태에 따른 링크의 색상을 바꿀 수 있다.
+  - link: 기본
+  - visited: 방문한 곳
+  - hover: 마우스롤 올렸을 때
+  - active: 클릭해서 링크가 열릴 때
+  style로 버튼 링크를 만들 수도 있다.
+
+  웹 페이지가 긴 경우 책갈피 링크를 만드는 것이 유용하다.
+  id 속성을 이용해 책갈피를 만들 수 있다.
+  #을 이용해 연결하며, 다른 페이지의 책갈피로도 이동 가능하다.
+-->
+<!DOCTYPE html>
+<head>
+  <!-- <style>
+    a:link {
+      color: green;
+      background-color: transparent;
+      text-decoration: none;
+    }
+
+    a:visited {
+      color: pink;
+      background-color: transparent;
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: red;
+      background-color: transparent;
+      text-decoration: underline;
+    }
+
+    a:active {
+      color: yellow;
+      background-color: transparent;
+      text-decoration: underline;
+    }
+  </style> -->
+  <style>
+    a:link,
+    a:visited {
+      background-color: #f44336;
+      color: white;
+      padding: 15px 25px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    a:hover,
+    a:active {
+      background-color: red;
+    }
+  </style>
+</head>
+<html>
+  <body>
+    <a href="https://blog.naver.com/easeon11" id="myblog">블로그 링크!</a>
+    <br />
+    <a href="https://blog.naver.com/easeon11" target="_balnk">새창으로 열기</a>
+    <br />
+
+    <a href="https://blog.naver.com/easeon11" target="_self"
+      >동일한 창에서 열기</a
+    >
+    <br />
+
+    <a href="https://blog.naver.com/easeon11" target="_parent"
+      >부모 프레임에서 열기</a
+    >
+    <br />
+
+    <a href="https://blog.naver.com/easeon11" target="_parent"
+      >전체 본문에서 열기</a
+    >
+    <br />
+
+    <a href="style.css">상대 링크 열기</a>
+    <br />
+
+    <a href="https://blog.naver.com/easeon11">
+      <img src="cat.jpg" alt="cat image" style="width: 150px; height: 150px" />
+    </a>
+    <br />
+
+    <a href="mailto:easeon78@gmail.com">send email</a>
+    <br />
+
+    <button onclick="document.location='https://blog.naver.com/easeon11'">
+      go blog
+    </button>
+    <br />
+
+    <a href="https://blog.naver.com/easeon11" title="나의 블로그"
+      >타이틀 추가</a
+    >
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <a href="#myblog">맨 위로 이동</a>
+  </body>
+</html>
