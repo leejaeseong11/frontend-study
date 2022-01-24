@@ -2,16 +2,61 @@
   이미지는 웹 페이지의 디자인과 모양을 향상 시킬 수 있다.
   <img> 태그를 이용해 이미지를 웹 페이지에 삽입한다.
   이미지가 기술적으로 삽입되는 것은 아니고, 링크가 되는 것이다. <img> 태그가 이미지를 보관할 공간을 만든다.
-  <img> 태그는 src와 alt 속성을 필수로 요구한다.
-  src 속성은 이미지의 경로(URL)를 지정한다.
-  웹 브라우저가 이미지를 삽입할 때 동일 위치에 있지 않은 경우 깨진 링크 아이콘이 표시된다. 이때 alt에 지정된 텍스트가 함께 출력된다.
-  alt 속성에서는 이미지에 대한 설명을 해주어야 한다.
+  - <img> 태그는 src와 alt 속성을 필수로 요구한다.
+    - src 속성은 이미지의 경로(URL)를 지정한다.
+    - 웹 브라우저가 이미지를 삽입할 때 동일 위치에 있지 않은 경우 깨진 링크 아이콘이 표시된다. 이때 alt에 지정된 텍스트가 함께 출력된다.
+  - alt 속성에서는 이미지에 대한 설명을 해주어야 한다.
+  - style 속성을 사용해 이미지의 너비(width)와 높이(height)를 지정할 수 있다.
+    - 너비와 높이를 지정하지 않으면 이미지를 로드하는 동안 웹 페이지가 깜빡일 수 있기 때문에 지정하는 것이 좋다.
+    - 너비와 높이를 <style> 태그에서 지정할 수도 있지만, 스타일 시트가 이미지 크기를 변경하는 것을 방지하기 위해 속성을 이용해 지정하는 것이 좋다.
+  - 다른 폴더에 이미지가 있는 경우 src 속성에 폴더 이름을 포함하면 된다.
+    - 상대 경로 표현 시 현재 폴더를 기준으로 한다면 "."을 이용해야 한다.
+  - 외부 이미지 사용시 전체 URL을 지정하면 된다.
+  - 애니메이션 이미지(gif)도 넣을 수 있다.
+  - 이미지를 링크로 사용한다면 <a> 태그 안에 넣으면 된다.
+  - float 속성을 이용해 이미지를 텍스트 오른쪽이나 왼쪽에 떠 있게 할 수 있다.
+  - 큰 이미지는 웹 페이지 속도를 느리게 할 수 있다.
 -->
 <!DOCTYPE html>
 <html>
+  <head>
+    <style>
+      /* img {
+        width: 100%;
+        height: 100%;
+      } */
+    </style>
+  </head>
   <body>
     <img src="trip.jpg" alt="trip image" />
     <br />
     <img src="wrong path" alt="trip image" />
+    <br />
+    <img src="trip.jpg" alt="trip image" width="500" height="600" />
+    <br />
+    <img src="./img/dress_woman.jpg" alt="woman image" />
+    <br />
+    <img
+      src="https://media.giphy.com/media/2D8g2rXcWx1DO/giphy.gif"
+      alt="free image"
+    />
+    <a
+      href="https://www.reddit.com/r/reactiongifs/comments/61co72/mrw_today_i_finally_left_a_job_ive_hated_for_years/"
+    >
+      <img
+        src="https://media.giphy.com/media/2D8g2rXcWx1DO/giphy.gif"
+        alt="free image"
+      />
+    </a>
+    <br />
+    <p>
+      <img
+        src="https://media.giphy.com/media/2D8g2rXcWx1DO/giphy.gif"
+        alt="free image"
+        style="float: right; width: 100px; height: 100px"
+      />
+      오른쪽에 있는 이미지의 출처는 텍스트 바로 위에서 오른쪽 이미지를 클릭해
+      링크를 타고 볼 수 있습니다.
+    </p>
   </body>
 </html>
