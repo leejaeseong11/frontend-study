@@ -1,0 +1,167 @@
+<!--
+  HTML 테이블을 사용해 데이터를 행과 열로 정렬할 수 있다.
+  셀은 <td> 태그로 나타낸다.
+  행은 <tr> 태그로 나타낸다.
+  테이블의 헤더는 <td> 대신 <th> 태그를 이용한다. 헤더는 기본적으로 중앙 정렬에 굵게 표시되지만, CSS를 사용해 변경할 수 있다.
+
+  테이블에 border 속성을 이용해 테두리를 추가할 수 있다.
+  기본적으로 이중 테두리로 생기지만, border-collapse 속성을 이용해 단일 테두리로 축소할 수 있다.
+  border을 흰색으로 하고, 각 셀에 배경색을 지정할 수도 있다.
+  border-radius로 모서리를 둥글게 할 수 있다. 이때 CSS 선택자를 이용해 가장 바깥의 테두리는 건너뛸 수 있다.
+  점선의 테두리도 설정할 수 있다. (dotted, dashed, solid, double, groove, inset, outset, none, hidden과 같이 다양한 테두리 설정 방법이 있다.)
+  border-color로 테두리 색상을 설정할 수 있다.
+
+  style 속성과 width, height로 테이블의 행, 열 크기를 지정한다. 
+  테이블의 너비는 <table>의 style에서 지정한다. 참고로 백분율은 부모 요소와 비교되어 설정된다.
+  특정 열의 크기는 <th>, <td>에 style을 추가하면 된다.
+  행의 높이는 <tr>의 style 속성에 height를 지정하면 된다.
+
+  <th>를 이용해 헤더를 나타내며 수직 테이블 헤더는 각 행의 첫 번째 셀을 <th>로 지정하면 된다.
+  헤더도 좌측으로 정렬하고 싶다면 text-align을 이용하면 된다.
+  두 개 이상의 열에 걸쳐 있는 헤더가 필요하면 colspan 속성을 이용한다.
+  <caption> 태그로 머리글 역할을 하는 캡션을 추가할 수 있다.
+
+  padding을 이용해 셀 가장자리와 셀 내용의 공간을 지정할 수 있다.
+  padding-top, padding-bottom, padding-left, padding-right로 특정 위치에만 지정할 수도 있다.
+  셀 간격을 지정하기 위해서는 border-spacing 속성을 이용하면 된다.
+
+  여러 셀을 걸쳐서 만드려면 colspan, rawspan 속성을 이용하면 된다.
+  colspan은 여러 열을, rowspan은 여러 행을 걸쳐 만든다.
+
+  tr:nth-child(even)과 같은 선택기로 행 요소의 스타일을 지정할 수 있다.
+  even은 짝수 행, odd는 홀수 행에 스타일이 적용된다.
+  행이 아닌 열 단위로 지정하려면 th, td에 적용하면 된다.
+  투명도를 지정해서 행/열을 섞어서 무늬를 만들 수도 있다.
+  각 표의 <tr>에서 border-bottom으로 테두리를 지정하면 가로 구분선이 있는 표가 된다.
+  :hover 선택기를 이용해 마우스 오버 시 테이블 행을 강조할 수 있다.
+
+  <colgroup>은 특정 열의 스타일을 지정하는데 사용된다.
+  각 그룹을 <col>로 지정하고, span에 스타일을 적용할 열의 수를 입력, style에 스타일을 지정한다.
+  colgroup에 적용할 수 있는 스타일은 제한적이다. (width, visibility, backgroudn, border)
+  여러 스타일을 지정하려면 <col>을 더 추가한다.
+  스타일이 없는 <col>을 지정해서 적용하지 않을 열은 건너뛸 수 있다.
+  visibility 속성을 collapse로 지정하여 열을 숨길 수 있다.
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      /* table,
+      th,
+      td {
+        border: 1px solid black;
+        border-collapse: collapse;
+      } */
+      /* table,
+      th,
+      td {
+        border: 1px solid white;
+        border-collapse: collapse;
+        border-radius: 10px;
+      }
+      th,
+      td {
+        background-color: cyan;
+      } */
+      /* th,
+      td {
+        border: 1px solid black;
+        border-radius: 10px;
+        border-style: dotted;
+        border-color: red;
+        padding-top: 5px;
+        padding-left: 10px;
+        padding-right: 20px;
+        padding-bottom: 30px;
+      }
+      th {
+          text-align: left;
+      }
+      table {
+          border-spacing: 30px;
+      }
+      tr:nth-child(even) {
+        background-color: rgba(4, 241, 202, 0.5);
+      }
+      th:nth-child(even), td:nth-child(even) {
+        background-color: rgba(255, 68, 0, 0.5);
+      } */
+      table {
+          border-collapse: collapse;
+          width: 100%;
+      }
+      tr {
+          border-bottom: 1px solid #ddd;
+      }
+      tr:hover {
+          background-color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <table style="width: 100%">
+      <tr>
+        <th style="width: 70%">Company</th>
+        <th>Contact</th>
+        <th>Country</th>
+      </tr>
+      <tr style="height: 200px">
+        <td>Alfreds Futterkiste</td>
+        <td>Maria Anders</td>
+        <td>Germany</td>
+      </tr>
+      <tr>
+        <td>Centro comercial Moctezuma</td>
+        <td>Francisco Chang</td>
+        <td>Mexico</td>
+      </tr>
+    </table> -->
+    <table >
+    <caption>TEST TABLE</caption>
+    <colgroup>
+    <col span="2" style="background-color: chartreuse;">
+    <col span="1" style="visibility: collapse;">
+    <col span="1">
+    <col span="2" style="background-color: pink;">
+    </colgroup>
+      <tr>
+        <th colspan="2">Company</th>
+        <td>Country</th>
+        <td>test data</td>
+        <td>test data</td>
+        <td>test data</td>
+      </tr>
+      <tr>
+        <th>Alfreds Futterkiste</td>
+        <td rowspan="2">Maria Anders</td>
+        <td>Germany</td>
+        <td>test data</td>
+        <td>test data</td>
+        <td>test data</td>
+      </tr>
+      <tr>
+        <th>Centro comercial Moctezuma</td>
+        <td>Mexico</td>
+        <td>test data</td>
+        <td>test data</td>
+        <td>test data</td>
+      </tr>
+      <tr>
+        <th>Centro comercial Moctezuma</td>
+        <td>Mexico</td>
+        <td>test data</td>
+        <td>test data</td>
+        <td>test data</td>
+        <td>test data</td>
+      </tr>
+      <tr>
+        <th>Centro comercial Moctezuma</td>
+        <td>Mexico</td>
+        <td>test data</td>
+        <td>test data</td>
+        <td>test data</td>
+        <td>test data</td>
+      </tr>
+    </table>
+  </body>
+</html>
