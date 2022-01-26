@@ -1,11 +1,13 @@
 # frontend-study
 
 ## roadmap
+
 https://roadmap.sh/frontend
 
 ---
 
 1. [Internet](https://github.com/leejaeseong11/frontend-study/tree/main/Internet)
+
 - [How does the internet work?](https://github.com/leejaeseong11/frontend-study/tree/main/Internet#how-does-the-internet-work)
 - [What is HTTP?](https://github.com/leejaeseong11/frontend-study/tree/main/Internet#what-is-http)
 - [Browsers and how they work?](https://github.com/leejaeseong11/frontend-study/tree/main/Internet#browsers-and-how-they-work)
@@ -16,6 +18,7 @@ https://roadmap.sh/frontend
 ---
 
 2. [HTML](https://github.com/leejaeseong11/frontend-study/tree/main/HTML#html)
+
 - [Learn the basics](https://github.com/leejaeseong11/frontend-study/tree/main/HTML#learn-the-basics)
 - Writing Semantic HTML
 - Forms and Validation

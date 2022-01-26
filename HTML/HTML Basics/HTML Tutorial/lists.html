@@ -1,0 +1,138 @@
+<!--
+  HTML 목록을 사용해 항목 집합을 그룹화 할 수 있다.
+  순서가 지정되지 않은 목록은 <ul> 태그로 시작하며, 각 항목을 <li> 태그로 시작한다.
+  순서가 지정된 목록은 <ol> 태그로 시작하며, 각 항목을 <li> 태그로 시작한다.
+
+  <ul> 태그에서 list-style-type 속성으로 마커의 스타일을 지정할 수 있다. (disc, circle, square, none)
+  목록을 중첩할 수 있다.
+  목록에 CSS 스타일을 적용할 수도 있다.
+
+  <ol> 태그의 type 속성으로 마커의 유형을 정의한다. (type="1", type="A", type="a", type="I", type="i")
+  start 속성으로 숫자를 지정하는 경우 지정된 숫자부터 시작된다.
+  마찬가지로 중첩이 가능하다.
+
+  <dl>은 설명 목록을 정의하고 <dt>는 용어의 이름 정의, <dd>는 용어 설명을 한다.
+-->
+
+<!DOCTYPE html>
+<head>
+  <style>
+    /* ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: #333333;
+    }
+    li a {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 16px;
+      text-decoration: none;
+    }
+    li {
+      float: left;
+    }
+    li a:hover {
+      background-color: #111111;
+    } */
+  </style>
+</head>
+<html>
+  <body>
+    <!-- <ul>
+      <li>Coffee</li>
+      <li>Tea</li>
+      <li>Milk</li>
+    </ul>
+    <ol>
+      <li>Coffee</li>
+      <li>Tea</li>
+      <li>Milk</li>
+    </ol>
+    <ul style="list-style-type: disc">
+      <li>Coffee</li>
+      <li>Tea</li>
+      <li>Milk</li>
+    </ul>
+    <ul style="list-style-type: square">
+      <li>Coffee</li>
+      <li>Tea</li>
+      <li>Milk</li>
+    </ul>
+    <ul style="list-style-type: circle">
+      <li>Coffee</li>
+      <li>Tea</li>
+      <li>Milk</li>
+    </ul>
+    <ul style="list-style-type: none">
+      <li>Coffee</li>
+      <li>Tea</li>
+      <li>Milk</li>
+    </ul>
+    <ul>
+      <li>Coffee</li>
+      <li>Tea</li>
+      <ul>
+        <li>Black tea</li>
+        <li>Green tea</li>
+      </ul>
+      <li>Milk</li>
+    </ul> -->
+    <!-- <ul>
+      <li>
+        <a href="#home">Home</a>
+      </li>
+      <li>
+        <a href="#news">Newx</a>
+      </li>
+      <li>
+        <a href="#contact">Contact</a>
+      </li>
+      <li>
+        <a href="#about">About</a>
+      </li>
+    </ul> -->
+    <ol type="1">
+      <li>Coffee</li>
+      <li>Tea</li>
+      <li>Milk</li>
+    </ol>
+    <ol type="A">
+      <li>Coffee</li>
+      <li>Tea</li>
+      <li>Milk</li>
+    </ol>
+    <ol type="a">
+      <li>Coffee</li>
+      <li>Tea</li>
+      <li>Milk</li>
+    </ol>
+    <ol type="I">
+      <li>Coffee</li>
+      <li>Tea</li>
+      <li>Milk</li>
+    </ol>
+    <ol type="i">
+      <li>Coffee</li>
+      <li>Tea</li>
+      <li>Milk</li>
+    </ol>
+    <ol start="50">
+      <li>Coffee</li>
+      <li>Tea</li>
+      <ol>
+        <li>Black tea</li>
+        <li>Green tea</li>
+      </ol>
+      <li>Milk</li>
+    </ol>
+    <dl>
+      <dt>Coffee</dt>
+      <dd>- black hot drink</dd>
+      <dt>Milk</dt>
+      <dd>- white cold drink</dd>
+    </dl>
+  </body>
+</html>
