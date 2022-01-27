@@ -16,5 +16,3 @@ HTML(Hyper Text Markup Language)은 웹 페이지를 만들기 위한 표준 마
 - Prettier - Code formatter: `option + shift + f`를 눌러 코드 컨벤션을 보기 좋게 만든다.
   - File > Preferences > Settings 에서 기본 포맷터를 Prettier로 설정해주어야 한다.
   - Format On Save 옵션을 키면 저장할 때마다 포맷을 맞춰준다.
-
-https://www.w3schools.com/html/html_blocks.asp

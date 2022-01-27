@@ -27,3 +27,5 @@ https://roadmap.sh/frontend
 - SEO Basics
 
 ---
+
+https://www.w3schools.com/html/html_classes.asp
