@@ -1,0 +1,65 @@
+<!--
+  class 속성은 HTML 요소에 대한 클래스를 지정한다.
+  여러 HTML 요소가 동일한 클래스를 공유한다.
+
+  클래스 이름을 가진 요소를 조작하기 위해 자바스크립트를 사용할 수도 있다.
+  동일한 클래스를 가진 요소에 동일한 스타일을 지정할 수 있다.
+
+  클래스를 생성하려면 마침표 문자를 쓰고, 그 뒤에 이름을 쓴다.
+  그리고 중괄호 안에 CSS 속성을 정의한다.
+  
+  HTML 요소는 둘 이상의 클래스에 속할 수 있다.
+  여러 클래스 이름은 공백으로 구분한다.
+  다른 요소가 동일한 클래스를 공유할 수도 있다.
+
+  클래스 이름으로 자바스크립트의 특정 요소 작업에 사용할 수 있다.
+  getElementsByClassName()으로 해당 클래스 이름을 가진 요소에 접근할 수 있다.
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      .city {
+        background-color: tomato;
+        color: white;
+        border: 2px solid black;
+        margin: 20px;
+        padding: 20px;
+      }
+      .note {
+        font-size: 120%;
+        color: red;
+      }
+      .main {
+        text-align: center;
+      }
+    </style>
+    <script>
+      function myFunction() {
+        var x = document.getElementsByClassName("city");
+        for (var i = 0; i < x.length; i++) {
+          x[i].style.display = "none";
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div class="city main">
+      <h2>London</h2>
+      <p>London is the capital of England.</p>
+    </div>
+    <div class="city">
+      <h2>Paris</h2>
+      <p>Paris is the capital of France.</p>
+    </div>
+    <div class="city">
+      <h2>Seoul</h2>
+      <p>Seoul is the capital of Korea.</p>
+    </div>
+
+    <h1>My <span class="note">Important</span> Heading</h1>
+    <p>This is some <span class="note">important</span> text.</p>
+
+    <button onclick="myFunction()">hide</button>
+  </body>
+</html>
