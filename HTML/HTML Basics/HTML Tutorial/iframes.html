@@ -1,0 +1,33 @@
+<!--
+  iframe은 웹 페이지 내에 웹 페이지를 표시하는 데 사용된다.
+
+  <iframe> 태그는 인라인 프레임을 지정한다.
+  인라인 프레임은 현재 HTML 문서 내에 다른 문서를 포함하는 데 사용된다.
+  스크린 리더가 iframe의 내용을 읽기 위해 title 속성을 포함하는 것이 좋다.
+
+  속성을 추가하여 height 및 width로 크기를 지정한다.
+  style의 CSS height, width를 지정해도 된다.
+
+  기본적으로 테두리가 있지만, style 속성으로 CSS border을 지정해서 없앨 수 있다.
+  테두리의 크기, 스타일, 색상을 변경할 수도 있다.
+
+  iframe을 링크 대상 프레임으로 사용할 수 있다.
+  링크의 target 속성을 지정하고, iframe의 name 속성을 넣어주면 된다.
+-->
+<!DOCTYPE html>
+<html>
+  <body>
+    <iframe
+      src="./links.html"
+      style="border: none"
+      width="200"
+      height="300"
+      title="Iframe example"
+    ></iframe>
+    <br />
+    <iframe src="colors.html" name="iframe_a" title="color"></iframe>
+    <p>
+      <a href="https://blog.naver.com/easeon11" target="iframe_a">blog link</a>
+    </p>
+  </body>
+</html>
