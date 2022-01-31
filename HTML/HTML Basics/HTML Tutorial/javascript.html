@@ -1,4 +1,43 @@
 <!--
+  자바스크립트를 이용해 페이지를 동적이고 대화식으로 만든다.
   
+  <script> 태그를 이용해 자바스크립트를 정의한다.
+  스크립트 내 명령문을 포함하거나, src를 이용해 외부 파일을 가져온다.
+  자바스크립트의 용도는 이미지 조작, 양식 유효성 검사 및 콘텐츠의 동적 변경이다.
+  HTML 요소를 선택하기 위해 document.getElementById() 방법을 자주 사용한다.
+
+  브라우저에서 스크립트를 비활성화하거나 스크립트를 지원하지 않는 경우 대체할 콘텐츠를 <noscript> 태그로 나타낸다.
 -->
 <!DOCTYPE html>
+<head> </head>
+<html>
+  <body>
+    <p id="demo"></p>
+    <img
+      id="img"
+      width="500px"
+      height="500px"
+      src="./cat.jpg"
+      alt="cat image"
+    />
+    <button onclick="changeImg(0)">change dress_woman</button>
+    <button onclick="changeImg(1)">change cat</button>
+    <script>
+      document.getElementById("demo").innerHTML = "Hello Javascript";
+      document.getElementById("demo").style.fontSize = "20px";
+      document.getElementById("demo").style.color = "yellow";
+      document.getElementById("demo").style.backgroundColor = "black";
+
+      function changeImg(flag) {
+        let change_img = "";
+        if (flag == 0) {
+          change_img = "./img/dress_woman.jpg";
+        } else {
+          change_img = "./cat.jpg";
+        }
+        document.getElementById("img").src = change_img;
+      }
+    </script>
+    <noscript>Sorry, no support javascript!</noscript>
+  </body>
+</html>
