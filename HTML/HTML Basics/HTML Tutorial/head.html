@@ -1,0 +1,65 @@
+<!--
+  <head> 태그 내에는 <title>, <style>, <meta>, <link>, <script>, <base> 태그를 포함한다.
+  
+  <head> 요소는 메타 데이터의 컨테이너이며 <html> 태그와 <body> 태그 사이에 배치된다.
+
+  <title> 요소는 문서의 제목을 정의한다.
+  제목은 텍스트 전용이어야 하며, 브라우저의 제목 표시줄이나 페이지 탭에 표시된다.
+  HTML 문서에 꼭 필요하며, 검색 엔진 최적화(SEO)에 매우 중요하다. 페이지 제목이 검색 엔진 알고리즘에서 검색 결과에 페이지를 나열할 때 순서를 정하는데 사용된다.
+  브라우저 도구 모음에서 제목을 정의하고, 즐겨찾기에 추가될 때 페이지의 제목을 제공하고, 검색 엔진 결과에 페이지 제목을 표시한다.
+  따라서 제목을 정확하고 의미있게 만들어야 한다.
+
+  <style> 요소는 HTML 페이지에 대한 스타일 정보를 정의한다.
+
+  <link> 요소는 현재 문서와 외부 리소스 간의 관계를 정의한다.
+  외부 스타일 시트를 연결할 때 자주 사용된다.
+
+  <meta> 요소는 문자 집합, 페이지 설명, 키워드, 문서 작성자 및 뷰포트 설정을 지정하는데 사용된다.
+  메타 데이터는 페이지에 표시되지는 않지만 브라우저, 검색 엔진 및 기타 웹 서비스에 사용된다.
+  (사용자 문자 집합, 검색 엔진 키워드, 웹 페이지에 대한 설명, 페이지 작성자, 문서 새로 고침, 웹 사이트가 모든 기기에서 잘 보이도록 설명 등에 대해 정의)
+
+  뷰포는 사용자가 볼 수 있는 영역을 말하며 장치에 따라 다르다.
+  <meta> 태그에서 name="viewport"를 추가하여 페이지 크기와 배율 제어 방법을 나타낸다.
+  width=device-width 는 장치의 화면 너비를 따르도록 페이지 너비를 설정하는 것,
+  initial-sacle=1.0 은 브라우저에서 페이지를 처음 로드할 때 초기 확대/축소 수준을 설정하는 것이다.
+
+  <script>는 자바스크립트를 정의할 때 사용한다.
+
+  <base>는 페이지의 모든 상대 URL에 대한 기본 URL 및 대상을 지정한다.
+  href, target 속성이 있어야 한다.
+  기본 URL이 다른 링크의 앞 부분이 된다.
+-->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>의미있는 제목</title>
+    <style>
+      h1 {
+        color: red;
+      }
+    </style>
+    <link rel="stylesheet" href="./style.css" />
+    <meta charset="UTF-8" />
+    <meta name="keywords" content="HTMLL, CSS, Javascript" />
+    <meta name="description" content="Free web tutorials" />
+    <meta name="author" content="Jaeseong Lee" />
+    <meta http-equiv="refresh" content="30" />
+    <meta name="veiwport" content="width=device-width, initail-scale=1.0" />
+    <script>
+      function myFunction() {
+        document.getElementById("demo").innerHTML = "hello javascript";
+      }
+    </script>
+    <base href="https://www.w3schools.com/" target="_blank" />
+  </head>
+
+  <body>
+    <h1>스타일 테스트</h1>
+    <h3>링크 테스트</h3>
+    <p id="demo"></p>
+    <button onclick="myFunction()">try</button>
+    <img src="images/stickman.gif" width="24" height="39" alt="Stickman" />
+    <a href="tags/tag_base.asp">HTML base Tag</a>
+  </body>
+</html>

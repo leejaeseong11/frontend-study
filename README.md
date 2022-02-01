@@ -28,4 +28,4 @@ https://roadmap.sh/frontend
 
 ---
 
-https://www.w3schools.com/html/html_filepaths.asp
+https://www.w3schools.com/html/html_layout.asp

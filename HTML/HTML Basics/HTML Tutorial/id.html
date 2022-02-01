@@ -12,22 +12,22 @@
   자바스크립트에서 getElementById() 속성으로 특정 ID를 가진 요소에 엑세스 할 수 있다.
 -->
 <!DOCTYPE html>
-<header>
-  <style>
-    #myHeader {
-      background-color: lightblue;
-      color: black;
-      padding: 40px;
-      text-align: center;
-    }
-  </style>
-  <script>
-    function displayText() {
-      document.getElementById("myHeader").innerHTML = "Change header name";
-    }
-  </script>
-</header>
 <html>
+  <head>
+    <style>
+      #myHeader {
+        background-color: lightblue;
+        color: black;
+        padding: 40px;
+        text-align: center;
+      }
+    </style>
+    <script>
+      function displayText() {
+        document.getElementById("myHeader").innerHTML = "Change header name";
+      }
+    </script>
+  </head>
   <body>
     <button onclick="displayText()">change header</button>
     <h2 id="header_two">link test</h2>
