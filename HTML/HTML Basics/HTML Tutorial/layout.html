@@ -1,0 +1,90 @@
+<!--
+  웹 사이트는 종종 여러 열에 콘텐츠를 표시한다.
+
+  HTML 레이아웃 요소
+  - <header>: 문서 또는 섹션의 헤더
+  - <nav>: 탐색 링크 집합
+  - <section>: 문서의 섹션
+  - <article>: 독립적인 콘텐츠
+  - <aside>: 콘텐츠 이외의 콘텐츠
+  - <footer>: 문서 또는 섹션의 바닥글
+  - <details>: 사용자 필요에 따라 열고 닫을 수 있는 추가 세부 정보
+  - <summary>: <details> 요소의 제목
+
+  레이아웃을 만드는 기술
+  - CSS Framework: Bootstrap과 같은 CSS 프레임워크로 레이아웃을 빠르게 만들 수 있다.
+  - CSS float: float 속성을 이용해 전체 웹 레이아웃을 수행한다. 부동 요소는 문서 흐름에 연결되어 유연성에 해를 끼칠 수 있다.
+  - CSS flexbox: 페이지 레이아웃이 다양한 화면 크기와 다양한 디스플레이 장치를 수용해야 할 때 요소가 예상대로 작동하도록 한다.
+  - CSS grid: 행과 열이 있는 그리드 기반 레이아웃 시스템을 제공하므로 부동 소수점 위치 지정을 사용하지 않고 웹 페이지를 쉽게 디자인한다.
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      header {
+        padding: 30px;
+        background-color: gray;
+        text-align: center;
+        font: 35px;
+        color: white;
+      }
+      nav {
+        float: left;
+        width: 30%;
+        height: 300px;
+        background-color: #ccc;
+        padding: 20px;
+      }
+      nav ul {
+        list-style-type: none;
+        padding: 0;
+      }
+      article {
+        float: left;
+        padding: 20px;
+        width: 70%;
+        background-color: #f1f1f1;
+        height: 300px;
+      }
+      section::after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+      footer {
+        background-color: gray;
+        padding: 10px;
+        text-align: center;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>css float layout</h2>
+    <p>layout example</p>
+    <header>
+      <h2>cities</h2>
+    </header>
+    <section>
+      <nav>
+        <ul>
+          <li>
+            <p>london</p>
+            <p>paris</p>
+            <p>seoul</p>
+          </li>
+        </ul>
+      </nav>
+      <article>
+        <h1>london</h1>
+        <p>london is capital city of england.</p>
+      </article>
+    </section>
+    <footer>
+      <p>footer</p>
+    </footer>
+  </body>
+</html>
