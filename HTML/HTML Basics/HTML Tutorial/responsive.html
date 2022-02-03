@@ -1,0 +1,68 @@
+<!--
+  반응형 웹 디자인은 모든 장치에서 보기 좋은 웹 페이지를 만드는 것이다.
+  다양한 화면 크기와 뷰포트에 맞게 자동으로 조정된다.
+
+  HTML, CSS를 사용하여 웹 사이트를 자동으로 크기 조정, 숨기기, 축소 또는 확대한다.
+  <meta>로 뷰포트를 설정한다.
+
+  반응형 이미지는 브라우저 크기에 맞게 잘 확장되는 이미지이다.
+  CSS width 속성이 100%이면, 이미지가 반응하고 확장 및 축소된다.
+  원래 이미지보다 크게 확장되는 것을 막기 위해서는 max-width 속성을 사용한다.
+
+  <picture> 요소를 사용하여 브라우저 창 크기에 따라 다른 이미지를 정의한다.
+
+  반응형 텍스트 크기는 "뷰포트 너비"를 의미하는 "vw" 단위로 설정한다.
+
+  텍스트와 이미지의 크기를 조정하는 것 외에 반응형 웹 페이지에서 미디어 쿼리를 사용하는 것도 일반적이다.
+  미디어 쿼리를 사용하면 다양한 브라우저 크기에 대해 완전히 다른 스타일을 정의한다.
+
+  인기있는 프레임워크는 반응형 디자인을 제공한다.
+  W3.CSs, Bootstrap 등이 그 예시이다.
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      .left,
+      .right {
+        float: left;
+        width: 20%;
+        background-color: blue;
+      }
+      .main {
+        float: left;
+        width: 60%;
+      }
+      @media screen and (max-width: 800px) {
+        .left,
+        .main,
+        .right {
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <img
+      src="./img/dress_woman.jpg"
+      style="max-width: 100%"
+      alt="dress_woman"
+    />
+    <picture>
+      <source srcset="./img/dress_woman.jpg" media="(max-width: 500px)" />
+      <source srcset="./trip.jpg" media="(max-width: 800px)" />
+      <source srcset="./cat.jpg" />
+    </picture>
+    <h1 style="font-size: 10vw">Hello HTML!</h1>
+    <div class="left">
+      <p>Left Menu</p>
+    </div>
+    <div class="main">
+      <p>Main Menu</p>
+    </div>
+    <div class="right">
+      <p>Right Menu</p>
+    </div>
+  </body>
+</html>
