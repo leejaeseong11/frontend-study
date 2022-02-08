@@ -1,0 +1,125 @@
+<!--
+  의미적 요소는 브라우저와 개발자 모두에게 의미를 정확히 설명한다.
+  - 의미 없는 요소: <div>, <span> 등 내용에 대해 알려주지 않음
+  - 의미 요소: <form>, <table>, <article> 등 내용을 명확히 알려줌
+
+  많은 웹 사이트는 <div id="nav">, <div class="header">, <div id="footer"> 와 같은 의미론적 요소가 포함된 HTML 코드가 포함되어 있다.
+
+  <section>은 일반적으로 제목이 있는 콘텐츠의 주제별 그룹이다.
+  장, 소개, 뉴스 항목, 연락처 정보 등에 사용한다.
+
+  <article> 요소는 독립적이고 자체 포함된 콘텐츠를 지정한다.
+  웹 사이트와 독립적으로 배포할 수 있어야 한다.
+  포럼 게시물, 블로그 게시물, 사용자 의견, 제품 카드, 신문 기사들에 사용된다.
+
+  <section>에 <article>을 중첩하거나 그 반대로 중첩해야 한다는 것이 정해져 있지는 않다.
+  둘 다 의미론적으로 의미가 있기 때문에, 둘 다 가능하다.
+
+  <header>는 소개 콘텐츠 또는 탐색 링크 집합의 컨테이너를 나타낸다.
+  일반적으로 아래 요소가 포함된다.
+  - 하나 이상의 제목 요소
+  - 로고 또는 아이콘
+  - 저작권 정보
+  같은 문서에 여러 <header>가 있을 수 있지만 <footer>, <address>, 다른 <header>에 포함되지는 않는다.
+
+  <footer>는 바닥글을 의미하며 아래와 같은 요소를 포함한다.
+  - 저작권 정보
+  - 연락처 정보
+  - 사이트맵
+  - 맨 위 링크로 돌아가기
+  - 관련 문서
+  하나의 문서에 여러 <footer>가 있을 수 있다.
+
+  <nav> 요소는 탐색 링크 세트를 정의한다.
+
+  <aside> 요소는 배치된 콘텐츠 외에 일부 콘텐츠를 정의한다.
+  주변 콘텐츠와 간접적으로 연관이 되어야 한다.
+
+  <figure> 태그는 일러스트레이션, 다이어그램, 사진, 코드 목록과 같은 자체 포함된 콘텐츠를 지정한다.
+  <figurecaption>은 <figure>에 대한 캡션을 정의한다. 요소의 첫 번째 또는 마지막 자식으로 배치한다.
+  <img> 요소는 실제 이미지/그림을 정의한다.
+
+  시맨틱 요소를 사용하면 애플리케이션, 기업, 커뮤니티에서 데이터를 공유하고 재사용할 수 있다.
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      .all-browser {
+        margin: 0;
+        padding: 5px;
+        background-color: lightgray;
+      }
+      .all-browser > h1,
+      .browser {
+        margin: 10px;
+        padding: 5px;
+      }
+      .browser {
+        background-color: white;
+      }
+      .browser > h2,
+      p {
+        margin: 4px;
+        font-size: 90%;
+      }
+      aside {
+        width: 30%;
+        padding-left: 15px;
+        margin-left: 15px;
+        float: right;
+        font-style: italic;
+        background-color: lightgray;
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <h1>웹 사이트 소개</h1>
+      <p>이 웹사이트는 어떤 사이트이다..</p>
+    </section>
+    <section>
+      <h1>콘텐츠</h1>
+      <p>이 웹사이트의 콘텐츠가 담긴다..</p>
+    </section>
+    <article class="all-browser">
+      <h1>브라우저의 종류</h1>
+      <article class="browser">
+        <h2>Chrome</h2>
+        <p>구글에서 나온 크롬이다.</p>
+      </article>
+      <article class="browser">
+        <h2>Firefox</h2>
+        <p>모질라에서 나온 파이어폭스이다.</p>
+      </article>
+      <article class="browser">
+        <h2>Microsoft Edge</h2>
+        <p>인터넷 익스플로러 다음 세대이다..</p>
+      </article>
+    </article>
+    <article>
+      <header>
+        <h1>기사 제목</h1>
+        <p>부 제목</p>
+      </header>
+      <p>본문</p>
+    </article>
+    <footer>
+      <p>Writer: Hyangham</p>
+      <p>blog <a href="https://blog.naver.com/easeon11">link</a></p>
+    </footer>
+    <nav>
+      <a href="https://www.naver.com/">Naver</a> |
+      <a href="https://github.com/">Github</a> |
+      <a href="https://www.google.com/">Google</a>
+    </nav>
+    <aside>
+      <h4>이건 aside이다.</h4>
+      <p>의미론적 요소에 대해 공부하고 있다.</p>
+    </aside>
+    <figure>
+      <img src="./cat.jpg" alt="Cat" />
+      <figcaption>This is cat.</figcaption>
+    </figure>
+  </body>
+</html>
