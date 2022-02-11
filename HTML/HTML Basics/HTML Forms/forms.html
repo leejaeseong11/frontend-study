@@ -1,0 +1,63 @@
+<!--
+  HTML 양식은 사용자 입력을 수집하는 데 사용된다.
+  <form> 요소로 사용자 입력을 위한 양식을 만들며, 텍스트 필드, 체크 박스, 라디오 버튼, 제출 버튼 등과 같은 다양한 유형의 입력 요소를 위한 컨테이너이다.
+  
+  <input>은 가장 많이 사용되는 양식 요소이다.
+  <input type="text">는 텍스트 입력을 위한 한 줄 입력 필드를 정의한다.
+  
+  <label>은 양식 요소에 대한 레이블을 정의한다.
+  사용자가 입력 요소에 초점을 맞추면 스크린 리더가 레이블을 읽어주기 때문에 스크린 리더 사용자에게 유용하다.
+  라디오 버튼, 체크 박스 같은 작은 영역을 클릭하는 데 어려움을 겪는 사용자에게 도움이 된다.
+  사용자가 요소 내 <label> 텍스트를 클릭하면 라디오 버튼/체크박스가 토글되기 때문이다.
+  <label> 태그의 for 속성은 <input> 태그의 id와 함께 바인딩 된다.
+
+  <input type="radio">로 라디오 버튼을 정의한다.
+  제한된 수의 선택 항목 중 하나를 선택할 수 있다.
+
+  <input type="checkbox">로 확인란을 정의한다.
+  확인란을 통해 사용자는 제한된 수의선택 중 ZERO 또는 MORE 옵션을 선택한다.
+
+  <input type="submit">은 양식 처리기에 양식 데이터를 제출하기 위한 버튼을 정의한다.
+  양식 처리기는 일반적으로 입력 데이터를 처리하기 위한 스크립트가 있는 서버의 파일로, 양식의 action 속성에 지정된다.
+
+  각 입력 필드에는 제출할 name 속성이 있어야 한다.
+  name 속성이 생략되면 필드의 값이 전송되지 않는다.
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form>
+      <label for="fname">성: </label>
+      <input type="text" id="fname" name="fname" /> <br />
+      <label for="lname">이름:</label>
+      <input type="text" id="lname" name="lname" /> <br />
+
+      <input type="radio" id="html" name="fav_language" value="HTML" />
+      <label for="html">HTML</label><br />
+      <input type="radio" id="css" name="fav_language" value="CSS" />
+      <label for="html">CSS</label><br />
+      <input
+        type="radio"
+        id="javascript"
+        name="fav_language"
+        value="JavaScript"
+      />
+      <label for="javascript">JavaScript</label><br />
+
+      <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike" />
+      <label for="vehicle1">I have a bike</label><br />
+      <input type="checkbox" id="vehicle2" name="vehicle2" value="Car" />
+      <label for="vehicle1">I have a car</label><br />
+      <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat" />
+      <label for="vehicle1">I have a boat</label><br />
+
+      <input type="submit" value="Submit" />
+    </form>
+  </body>
+</html>
