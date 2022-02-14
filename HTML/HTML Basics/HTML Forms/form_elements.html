@@ -1,0 +1,85 @@
+<!--
+  <input> 요소는 가장 많이 사용되는 양식 요소로 type 속성에 따라 여러가지 방법으로 표시된다.
+
+  <label> 요소는 여러 양식 요소에 대한 레이블을 지정하며, for 속성으로 <input>의 id와 바인딩된다.
+  
+  <select> 요소는 드롭다운 목록을 정의한다.
+  <option> 요소는 선택할 수 있는 옵션을 정의한다.
+  기본적으로 가장 첫 번째 항목이 선택된다.
+  미리 옵선을 지정하려면 옵션에 selected 속성을 추가해야 한다.
+  size 속성을 사용해서 표시되는 값의 수를 지정한다.
+  multiple 속성을 사용해서 둘 이상의 값을 선택할 수 있다. (맥은 커맨트 키로 다중 선택 가능하다)
+
+  <textarea> 요소는 여러 줄 입력 필드를 정의한다.
+  rows 속성은 텍스트 영역에 표시되는 줄 수를 지정한다.
+  cols 속성은 텍스트 영역의 가시적 너비를 지정한다.
+  CSS를 사용해 텍스트 영역의 크기를 지정할 수도 있다.
+
+  <button> 요소는 클릭 가능한 버튼을 정의한다.
+
+  <fieldset> 요소는 양식에서 관련 데이터를 그룹화하는 데 사용된다.
+  <legend> 요소는 <filedset> 요소의 캡션을 정의한다.
+
+  <datalist> 요소는 <input> 요소에 대해 미리 정의된 옵션 목록을 지정한다.
+  사용자는 데이터를 입력할 때 미리 정의된 옵션의 드롭다운 목록을 볼 수 있다.
+  <input> 요소의 list 속성은 <datalist> 요소의 id 속성을 참조해야 한다.
+  
+  <output> 요소는 계산 결과를 나타낸다.
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="">
+      <label for="fname">성</label>
+      <input type="text" id="fname" name="fname" />
+      <select name="cars" id="cars" size="3" multiple>
+        <option value="volvo">Volvo</option>
+        <option value="saab">Saab</option>
+        <option value="fiat">Fiat</option>
+        <option value="audi" selected>Audi</option>
+      </select>
+      <textarea name="message" id="msg" cols="30" rows="10">
+        This is textarea 
+      </textarea>
+      <br />
+      <br />
+      <br />
+      <fieldset>
+        <legend>filedset test</legend>
+        <textarea
+          name="message-two"
+          id="msg-two"
+          style="width: 200px; height: 100px"
+        >
+          This is textarea2
+        </textarea>
+        <button type="button" onclick="alert('Hello world!')">click</button>
+      </fieldset>
+      <input list="browsers" />
+      <datalist id="browsers">
+        <option value="Internet Exploerer"></option>
+        <option value="Firefox"></option>
+        <option value="Chrome"></option>
+        <option value="Opera"></option>
+        <option value="Safari"></option>
+      </datalist>
+    </form>
+    <form action="" oninput="x.value=parseInt(a.value)+parseInt(b.value)">
+      0
+      <input type="range" id="a" name="a" value="50" />
+      100 +
+      <input type="number" id="b" name="b" value="50" />
+      =
+      <output name="x" , for="a b"></output>
+      <br />
+      <br />
+      <input type="submit" />
+    </form>
+  </body>
+</html>

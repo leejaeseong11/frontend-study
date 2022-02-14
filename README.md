@@ -28,4 +28,4 @@ https://roadmap.sh/frontend
 
 ---
 
-https://www.w3schools.com/html/html_urlencode.asp
+https://www.w3schools.com/html/html_form_input_types.asp

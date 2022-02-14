@@ -1,0 +1,53 @@
+<!--
+  action 속성은 양식이 제출될 때 수행할 작업을 정의한다.
+  일반적으로 사용자가 제출 버튼을 클릭하면 양식 데이터가 서버의 파일로 전송된다.
+  양식 파일에는 데이터를 처리하는 서버측 스크립트가 포함되어 있다.
+  action을 생략하면 작업이 현재 페이지로 설정된다.
+
+  target 속성은 양식을 제출한 후 받은 응답을 표시할 위치를 지정한다. (_blank, _self, _parent, _top, framename)
+  기본 값은 _self로 응답이 현재 창에서 열리는 것이다.
+
+  method 속성은 양식 데이터를 제출할 때 사용할 HTTP 메소드를 지정한다.
+  양식 데이터는 URL 변수 또는 HTTP 포스트 트랜잭션으롭 보낼 수 있다.
+  기본 메소드는 GET이다.
+  GET
+  - 이름/값 쌍으로 양식 데이터를 URL에 추가한다.
+  - 따라서 GET을 사용하여 민감한 데이터를 보내면 안된다.
+  - URL 길이가 제한된다.
+  - 사용자가 결과를 책갈피로 지정하려는 양식 제출에 유용하다.
+  - Google의 쿼리 문자열과 같은 비보안 데이터에 유용하다.
+  POST
+  - HTTP 요청의 본문 안에 양식 데이터를 추가한다. (제출된 양식 데이터는 URL에 표시되지 않는다)
+  - 크기 제한이 없으며 많은 양의 데이터를 보내는 데 사용할 수 있다.
+  - POST가 포함된 양식 제출은 책갈피로 지정할 수 없다.
+
+  autocomplete 속성은 양식에 자동 완성 기능 설정 여부를 지정한다.
+  자동 완성이 켜져 있으면 브라우저는 사용자가 이전에 입력한 값을 기반으로 자동으로 값을 완성한다.
+
+  novalidate 속성은 Bool 속성이다.
+  존재한느 경우 제출 시 양식 데이터의 유효성을 검하지 않아야 함을 지정한다.
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form
+      action="/action_page.php"
+      target="_blank"
+      method="get"
+      autocapitalize="on"
+      novalidate
+    >
+      <label for="fname">성: </label>
+      <input type="text" id="fname" name="fname" /> <br />
+      <label for="lname">이름:</label>
+      <input type="text" id="lname" name="lname" /> <br />
+      <input type="submit" value="Submit" />
+    </form>
+  </body>
+</html>
