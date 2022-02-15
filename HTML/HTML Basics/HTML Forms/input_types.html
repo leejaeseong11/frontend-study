@@ -1,0 +1,138 @@
+<!--
+  <input>의 type 별 정리입니다.
+  - text: 한 줄 텍스트 입력 필드
+  - password: 비밀번호 필드
+  - submit:
+    - 양식 처리기에 양식 데이터를 제출하기 위한 버튼
+    - 양식 처리기는 form의 action 속성에 지정
+    - value를 생략하면 기본 텍스트(제출) 표시
+  - reset: 모든 양식 값을 기본값으로 재설정하는 재설정 버튼
+  - radio: 제한된 수의 선택 항목 중 하나만 선택하는 라디오 버튼
+  - checkbox: 확인란을 정의하여 제한된 수의 선택 중 ZERO 또는 MORE개의 선택
+  - button: 버튼을 정의
+  - color: 색상 선택기
+  - date: 
+    - 날짜 선택기
+    - min, max 속성으로 날짜에 제한을 추가할 수도 있다.
+  - datetime-local: 날짜 및 시간 입력 필드를 지정
+  - email
+    - 이메일 주소를 포함해야 하입 입력 필드
+    - 제출 시 이메일 주소가 자동으로 검증될 수 있음
+    - 일부 스마트폰은 이메일 유형을 인식하고 자동으로 .com을 붙임
+  - file: 파일 선택 필드와 파일을 업로드하기 위한 찾아보기 버튼 정의
+  - hidden: 
+    - 숨겨진 입력 필드를 정의, 사용자에게 표시되지 않음
+    - 숨겨진 필드를 사용하면 웹 개발자가 양식을 제출할 때 사용자가 보거나 수정할 수 없는 데이터를 포함할 수 있음
+    - 종종 양식이 제출될 때 업데이트해야 하는 데이터베이스 레코드를 저장
+    - 단, 브라우저 개발자 도구 또는 소스 보기 기능으로 보거나 편집이 가능하기 때문에 보안의 형태로 사용하면 안 됨
+  - month: 사용자가 월과 연도를 선택
+  - number:
+    - 숫자 입력 필드를 정의
+    - 허용되는 번호에 대한 제한을 설정
+  - checked, disabled, max, maxlength, min, pattern, readonly, required, size, step, value와 같이 입력을 제한하는 속성이 있음
+  - range: 슬라이더 컨트롤과 같이 정확한 값이 중요하지 않은 숫자를 입력하기 위한 컨트롤을 정의
+  - search: 검색 필드에 사용
+  - tel: 전화번호를 포함해야 하는 입력 필드에 사용
+  - time: 사용자가 시간을 선택
+  - url:
+    - 주소를 포함해야 하는 입력 필드에 사용
+    - url 필드 제출 시 자동 유효성 검사를 할 수도 있음
+    - 일부 스마트폰은 url 유형을 인식하여 자동으로 .com 을 추가
+  - week: 주와 연도를 선택
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="">
+      <label for="name">이름: </label>
+      <input type="text" id="name" name="name" />
+      <br />
+      <label for="pwd">비밀번호: </label>
+      <input type="passwrod" id="pwd" name="pwd" />
+      <br />
+      <input type="submit" value="Submit" />
+      <br />
+      <input type="submit" />
+      <br />
+      <input type="reset" />
+      <br />
+      <input type="radio" id="html" name="fav_lang" value="HTML" />
+      <label for="html">HTML</label>
+      <input type="radio" id="css" name="fav_lang" value="CSS" />
+      <label for="css">CSS</label>
+      <input type="radio" id="html" name="fav_lang" value="JavaScript" />
+      <label for="javscript">JavsScript</label>
+      <br />
+      <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike" />
+      <label for="vehicle1"> I have a bike</label>
+      <input type="checkbox" id="vehicle2" name="vehicle2" value="Car" />
+      <label for="vehicle2"> I have a car</label>
+      <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat" />
+      <label for="vehicle3"> I have a boat</label>
+      <br />
+      <input type="button" onclick="alert('Hello Form!')" value="Click Me" />
+      <br />
+      <label for="favcolor">Color selector: </label>
+      <input type="color" name="favcolor" id="favcolor" />
+      <br />
+      <label for="birthday">Birthday: </label>
+      <input type="date" id="birthday" name="birthday" min="1997-01-11" />
+      <br />
+      <input type="datetime-local" />
+      <br />
+      <label for="email">이메일 입력: </label>
+      <input type="email" id="email" name="email" />
+      <br />
+      <label for="myfile"> Select File: </label>
+      <input type="file" id="myfile" name="myfile" />
+      <br />
+      <input type="hidden" id="custId" name="custId" value="3487" />
+      <br />
+      <label for="bdaymonth">Birthday (month and year): </label>
+      <input type="month" id="bdaymotnh" name="bdaymonth" />
+      <br />
+      <label for="quantity">Quantity (1~5): </label>
+      <input type="number" id="quantity" name="quantity" min="1" max="5" />
+      <br />
+      <label for="quantity-two">입력 제한: </label>
+      <input
+        type="number"
+        id="quantity-two"
+        name="quantity-two"
+        min="0"
+        max="100"
+        step="10"
+        value="30"
+      />
+      <br />
+      <label for="vol">Volume (0~50): </label>
+      <input type="range" id="vol" name="vol" min="0" max="50" />
+      <br />
+      <label for="gsearch">Search Google: </label>
+      <input type="search" id="gsearch" name="gsearch" />
+      <br />
+      <label for="phone">Enter your phone number: </label>
+      <input
+        type="tel"
+        id="phone"
+        name="phone"
+        pattern="[0-9]{3}-[0-9]{4}-[0-9]{4}"
+      />
+      <br />
+      <label for="appt">Select a time: </label>
+      <input type="time" id="appt" name="appt" />
+      <br />
+      <label for="blog">Add your blog: </label>
+      <input type="url" id="blog" name="blog" />
+      <br />
+      <label for="week">Select a week: </label>
+      <input type="week" id="week" name="week" />
+    </form>
+  </body>
+</html>
