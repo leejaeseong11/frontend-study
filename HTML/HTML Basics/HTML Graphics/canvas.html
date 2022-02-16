@@ -1,0 +1,106 @@
+<!--
+  <canvas> 요소는 그래픽을 기르는데 사용된다.
+  <canvas<는 그래픽의 컨테이너고, 실제로 그리는 것은 자바스크립트를 이용한다.
+  경로, 상자, 원, 텍스트를 그리고 이미지를 추가할 수 있다.
+
+  캔버스는 기본적으로 테두리와 내용이 없다.
+  스크립트 참조를 위해 id 속성을 지정하고, width와 height를 지정해서 크기를 정의한다.
+  테두리 추가는 style 속성을 이용한다.
+
+  자바스크립트를 이용해 드로잉을 할 수 있다.
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- 선 그리기 -->
+    <canvas
+      id="myCanvas"
+      width="200"
+      height="100"
+      style="border: 1px solid #000000"
+    >
+    </canvas>
+    <script>
+      var c = document.getElementById("myCanvas");
+      var ctx = c.getContext("2d");
+      ctx.moveTo(0, 0);
+      ctx.lineTo(200, 100);
+      ctx.stroke();
+    </script>
+    <br />
+    <!-- 원 그리기 -->
+    <canvas id="myCanvas2"> </canvas>
+    <script>
+      var c = document.getElementById("myCanvas2");
+      var ctx = c.getContext("2d");
+      ctx.beginPath();
+      ctx.arc(95, 50, 40, 0, 2 * Math.PI);
+      ctx.stroke();
+    </script>
+    <br />
+    <!-- 텍스트 그리기 -->
+    <canvas id="myCanvas3"></canvas>
+    <script>
+      var c = document.getElementById("myCanvas3");
+      var ctx = c.getContext("2d");
+      ctx.font = "30px Arial";
+      //   ctx.fillText("Hello Wrold!", 10, 50);
+      ctx.strokeText("HelloWrold!", 10, 30);
+    </script>
+    <br />
+    <!-- 그라데이션 -->
+    <canvas
+      id="myCanvas4"
+      width="200"
+      height="100"
+      style="border: 1px solid #000000"
+    >
+    </canvas>
+    <script>
+      var c = document.getElementById("myCanvas4");
+      var ctx = c.getContext("2d");
+
+      //   var grd = ctx.createLinearGradient(0, 0, 200, 0);
+      var grd = ctx.createRadialGradient(75, 50, 5, 90, 60, 100);
+      grd.addColorStop(0, "red");
+      grd.addColorStop(1, "white");
+
+      ctx.fillStyle = grd;
+      ctx.fillRect(10, 10, 150, 80);
+    </script>
+    <br />
+    <!-- 이미지 그리기 -->
+    <img
+      src="../HTML Tutorial/cat.jpg"
+      alt="cat"
+      id="cat"
+      width="200"
+      height="200"
+    />
+    <br />
+    <canvas
+      id="myCanvas5"
+      width="500"
+      height="500"
+      style="border: 1px solid #000000"
+    >
+    </canvas>
+    <br />
+    <p><button onClick="drawImage()">그림 넣기</button></p>
+
+    <script>
+      function drawImage() {
+        var c = document.getElementById("myCanvas5");
+        var ctx = c.getContext("2d");
+        var img = document.getElementById("cat");
+        ctx.drawImage(img, 10, 10);
+      }
+    </script>
+  </body>
+</html>

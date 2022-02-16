@@ -1,0 +1,93 @@
+<!--
+  <input> 요소의 속성
+  - value: 필드의 초기값을 지정
+  - readonly: 읽기 전용 속성으로 수정이 불가하며 제출 시 그대로 전송됨
+  - disabled: 비활성화되어 클릭이 불가능하며 제출 시 정송되지 않음
+  - size: 입력 필드의 보이는 너비를 지정, 기본값은 20
+  - maxlength: 최대 문자 수 지정, 사용자에게 피드백을 제공하지 않으므로 자바스크립트로 경고문 작성해야 함
+  - min, max: 숫자, 범위, 날짜 등의 입력 유형에서 최소값과 최대값을 지정
+  - mutiple: 둘 이상의 값을 입력할 수 있도록 지정, 이메일 및 파일 입력 유형에서 작동
+  - pattern: 
+    - 양식이 제출될 때 입력 필드의 값이 검사되는 정규식을 지정
+    - 텍스트, 날짜, url, 전화, 에미일, 비밀번호 유형에서 작동
+  - placeholder: 
+    - 입력 필드의 예상 값을 설명하는 짧은 힌트 지정
+    - 사용자가 값을 입력하기 전에 힌트가 입력 필드에 표시
+    - text, search, url, tel, email, password와 같은 유형에서 작동
+  - required
+    - 양식을 제출하기 전에 입력 필드를 채워야 함
+    - 텍스트, 검색, url, 전화, 이메일, 비밀번호, 날짜 선택기, 번호, 확인란, 라디오, 파일과 같은 유형에서 작동
+  - step:
+    - 법적 숫자 간격을 지정
+    - 최대 및 최소 속성과 함께 올바른 값 범위 생성 가능
+    - 숫자, 범위, 날짜, datetime-local, 월, 시간 및 주와 같은 유형에서 작동
+  - autofocus: 페이지가 로드될 때 입력 필드가 자동으로 퍼커스를 받음
+  - height, weight: image 타입의 높이와 너비를 지정
+  - list: <datalist> 요소에 미리 정의된 옵션을 포함하는 요소를 참조
+  - autocomplete: 
+    - 양식 또는 입력 필드가 자동 완성 기능을 켜야 하는지 여부를 지정
+    - 자동 완성을 사용하여 브라우저에서 값을 예측
+    - 사용자가 필드에 입력을 시작하면 이전 값을 기반으로 필드를 채우는 옵션 표시
+    - 텍스트, 검색, url, 전화, 이메일, 비밀번호, 날짜 선택기, 범위 및 색상 유형과 작동
+    - 브라우저에서 자동 완성 기능을 켜야 될 수 있음
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="" autocomplete="on">
+      <input type="text" value="초기값" />
+      <br />
+      <input type="text" value="수정 불가" readonly />
+      <br />
+      <input type="text" value="비활성화" disabled />
+      <br />
+      <input type="text" value="크기 4" size="4" />
+      <br />
+      <input type="text" value="크기 4" maxlength="4" />
+      <br />
+      <input type="number" min="1" max="5" />
+      <input type="date" min="1997-01-11" max="2022-02-16" />
+      <br />
+      <input type="file" multiple />
+      <br />
+      <input
+        type="text"
+        pattern="[A-Za-z]{3}"
+        title="Three letter country code"
+      />
+      <br />
+      <input type="tel" placeholder="010-0000-0000" />
+      <br />
+      <input type="text" required />
+      <br />
+      <input type="number" step="5" />
+      <br />
+      <input type="text" autofocus />
+      <br />
+      <input
+        type="image"
+        src="../HTML Tutorial/cat.jpg"
+        alt="cat"
+        width="48"
+        height="48"
+      />
+      <br />
+      <input list="browsers" />
+      <datalist id="browsers">
+        <option value="Internet Expoloer"></option>
+        <option value="Firefox"></option>
+        <option value="Chrome"></option>
+      </datalist>
+      <br />
+      <input type="text" autocomplete="off" />
+      <br />
+      <input type="submit" />
+    </form>
+  </body>
+</html>

@@ -103,4 +103,10 @@ HTML과의 차이는 아래와 같다.
 <input type="checkbox" name="vehicle" value="car" checked="checked" />
 ```
 
+### 코드 👉 [HTML Forms](https://github.com/leejaeseong11/frontend-study/tree/main/HTML/HTML%20Basics/HTML%20Forms)
+
+<form> 요소는 정보를 제출하기 위한 대화형 컨트롤을 포함하는 문서 구획이다.
+
 ### 코드 👉 [HTML Forms]()
+
+HTML에서 그래픽을 그리기 위한 <canvas>와 vector 기반 그래픽을 나타내는 <svg>를 다룬다.

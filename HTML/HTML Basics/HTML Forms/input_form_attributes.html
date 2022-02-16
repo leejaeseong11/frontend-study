@@ -1,0 +1,82 @@
+<!--
+  - form: <form>의 바깥 <input>의 form 속성과 <form>의 id 속성이 같으면 바깥에 위치해도 같은 form으로 위치시킨다.
+  - formaction:
+    - 양식이 제출될 때 입력을 처리할 파일의 URL을 지정
+    - <form>의 action 속성을 재정의
+    - 제출 및 이미지 입력 유형과 함께 작동
+  - formenctype:
+    - 제출할 때 양식 데이터를 인코딩하는 방법을 지정
+    - <form>의 enctype을 재정의
+    - 제출 및 이미지 입력 유형과 함께 작동
+  - formmethod:
+    -  form-data를 action URL로 보내기 위한 HTTP 메소드 정의
+    - <form>의 method 속성을 재정의
+    - 제출 및 입력 유형과 함께 작동
+    - 양식 데이터는 URL 변수 또는 HTTP 포스트 트랜잭션으로 보낼 수 있음
+    - get:
+      - 이름/값 쌍의 URL에 양식 데이터를 추가
+      - 사용자가 결과를 책깔피로 지정하려는 양식 제출에 유용
+      - URL에 넣을 수 있는 데이터 양에 제한이 있어 모든 데이터가 올바르게 전송되었는지 확신할 수 없음
+      - 민감한 정보에 사용하면 안 됨
+    - post:
+      - 양식 데이터를 HTTP 포스트 트랜잭션으로 보냄
+      - 포스트 방법을 사용하는 양식 제출은 북마크할 수 없음
+      - get 보다 안전하며 크기 제한이 없음
+    - formtarget:
+      - 양식을 제출한 후 받은 응답을 표시할 위치를 나타내는 이름 또는 키워드를 지정
+      - <form>의 target 속성을 재정의
+      - 제출 및 이미지 입력 유형과 함께 작동
+    - formnovalidate:
+      - 제출 시 <input> 요소의 유효성을 검사하지 않도록 지정
+      - <form> 요소의 novalidate 속성을 재정의
+      - 제출 유형과 함께 작동
+    - <form>의 novalidate: 모든 양식의 유효성을 검사하지 않음
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="" id="form1">
+      <input type="text" id="fname" name="fname" />
+      <input type="submit" />
+    </form>
+    <input type="text" id="lname" name="lname" form="form1" />
+    <br />
+    <form action="./forms.html">
+      <input type="text" />
+      <input type="submit" />
+      <input
+        type="submit"
+        formaction="./form_elements.html"
+        value="other submit"
+      />
+    </form>
+    <br />
+    <form action="">
+      <input type="text" name="test" />
+      <input type="submit" />
+      <input
+        type="submit"
+        formenctype="multipart/form-data"
+        value="formenctype"
+      />
+    </form>
+    <br />
+    <form action="" method="get">
+      <input type="text" name="test" required />
+      <input type="submit" />
+      <input type="submit" formmethod="post" value="post" />
+      <input type="submit" formtarget="_blank" value="blank" />
+      <input type="submit" formnovalidate value="formnovalidate" />
+    </form>
+    <form action="" novalidate>
+      <input type="text" required />
+      <input type="submit" />
+    </form>
+  </body>
+</html>
