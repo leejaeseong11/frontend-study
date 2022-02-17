@@ -6,7 +6,7 @@
 
 https://www.w3schools.com/html/html_intro.asp
 
-### 코드 👉 [HTML Basics](https://github.com/leejaeseong11/frontend-study/tree/main/HTML/HTML%20Basics)
+### HTML Basics 👉 [코드](https://github.com/leejaeseong11/frontend-study/tree/main/HTML/HTML%20Basics)
 
 **Introduction**
 HTML(Hyper Text Markup Language)은 웹 페이지를 만들기 위한 표준 마크업 언어이다. HTML 요소는 시작 태그, 요소의 내용, 종료 태그로 정의된다.
@@ -103,10 +103,30 @@ HTML과의 차이는 아래와 같다.
 <input type="checkbox" name="vehicle" value="car" checked="checked" />
 ```
 
-### 코드 👉 [HTML Forms](https://github.com/leejaeseong11/frontend-study/tree/main/HTML/HTML%20Basics/HTML%20Forms)
+### HTML Forms 👉 [코드](https://github.com/leejaeseong11/frontend-study/tree/main/HTML/HTML%20Basics/HTML%20Forms)
 
 <form> 요소는 정보를 제출하기 위한 대화형 컨트롤을 포함하는 문서 구획이다.
 
-### 코드 👉 [HTML Forms]()
+### HTML Forms 👉 [코드](https://github.com/leejaeseong11/frontend-study/tree/main/HTML/HTML%20Basics/HTML%20Graphics)
 
 HTML에서 그래픽을 그리기 위한 <canvas>와 vector 기반 그래픽을 나타내는 <svg>를 다룬다.
+
+### HTML Media 👉 [코드]()
+
+멀티미디어는 다양한 형식으로 제공되어 이미지, 음악, 사운드, 비디오, 레코드, 영화, 애니메이션 등 듣거나 볼 수 있는 모든 것이다.
+웹 페이지에는 다양한 유형과 형식의 멀티미디어가 포함되어 있다.
+
+최초의 웹 브라우저는 단일 색상, 단일 글꼴의 텍스트만 지원했지만, 나중에 색상, 글꼴, 이미지, 멀티미디어를 지원하기 시작했다.
+
+멀티미디어 요소는 미디어 파일에 저장된다.
+파일 확장자로 파일 유형을 검사하며 .wav, .mp3, .mp4, .mpg, .wmv, .avi와 같은 형식과 확장자가 있다.
+
+비디오 형식
+
+- MP4, WebM, OGG형식은 HTML에서 지원된다.
+- 유튜브는 MP4를 권장한다.
+
+오디오 형식
+
+- MP3는 압축된 녹음 음악에 적합하다.
+- 웹 사이트가 녹음된 음악과 관련되어 있다면 MP3가 적합하다.
