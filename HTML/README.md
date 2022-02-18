@@ -111,7 +111,7 @@ HTML과의 차이는 아래와 같다.
 
 HTML에서 그래픽을 그리기 위한 <canvas>와 vector 기반 그래픽을 나타내는 <svg>를 다룬다.
 
-### HTML Media 👉 [코드]()
+### HTML Media 👉 [코드](https://github.com/leejaeseong11/frontend-study/tree/main/HTML/HTML%20Basics/HTML%20Media)
 
 멀티미디어는 다양한 형식으로 제공되어 이미지, 음악, 사운드, 비디오, 레코드, 영화, 애니메이션 등 듣거나 볼 수 있는 모든 것이다.
 웹 페이지에는 다양한 유형과 형식의 멀티미디어가 포함되어 있다.
