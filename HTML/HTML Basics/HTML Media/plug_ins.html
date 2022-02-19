@@ -1,0 +1,34 @@
+<!--
+플러그인은 브라우저의 표준 기능을 확장하는 컴퓨터 프로그램으로 아래와 같은 용도로 사용된다.
+- Java 앱 실행
+- Microsoft AcvtiveX 컨트롤 실행
+- Flash 동영상 표시
+- 지도 표시
+- 바이러스 검사
+- 은행 ID 확인
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!--
+    <object> 요소는 모든 브라우저에서 지원한다. 해당 요소로 HTML 문서 내 포함된 개체를 정의한다.
+    웹 페이지에 플러그인을 포함하도록 설계되었지만 HTML을 포함하는데 사용할 수도 있다.
+    -->
+    <object width="100%" height="500px" data="./video.html"></object>
+    <object data="../HTML Tutorial/cat.jpg"></object>
+    <!--
+    <embed> 요소는 모든 주요 브라우저에서 지원된다. 해당 요소 또한 HTML 문서 내에 포함된 개체를 정의한다.
+    웹 브라우저는 오랫동안 <embed>를 지원해왔으나 HTML5 이전에는 HTML 사양의 일부가 아니었다.
+    <embed>는 닫는 태그는 없고 대체 택스트를 포함할 수 없다.
+    <embed>로 HTML을 포함할 수도 있다.
+    -->
+    <embed src="../HTML Tutorial/img/dress_woman.jpg" />
+    <embed width="100%" height="500px" src="./audio.html" />
+  </body>
+</html>

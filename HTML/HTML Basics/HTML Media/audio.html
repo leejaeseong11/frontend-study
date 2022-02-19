@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!--
+    HTML로 오디오를 전송하려면 <audio> 요소를 사용한다.
+    controls를 이용해 재생, 일시중지 및 볼륨과 같은 오디오 컨트롤을 추가한다.
+    <source> 요소로 브라우저에서 선택할 수 있는 오디오 파일을 지정한다. 브라우저는 처음 인식된 오디오 형식을 사용한다.
+    <audio> 태그에 있는 텍스트는 해당 요소를 지원하지 않는 브라우저에만 표시된다.
+    -->
+    <audio controls>
+      <source src="./sample_music.mp3" type="audio/mp3" />
+      Your browser does not support the audio element.
+    </audio>
+    <!--
+    autoplay를 이용해 자동 재생을 할 수 있다.
+    크롬은 자동 재생을 허용하지 않아 muted로 음소거를 해야 자동 재생이 된다.
+    -->
+    <br />
+    <audio controls autoplay muted>
+      <source src="./sample_music.mp3" type="audio/mp3" />
+      Your browser does not support the audio element.
+    </audio>
+    <!--
+    HTML DOM으로 메서드, 속성 및 이벤트를 정의한다.
+    오디오 로드, 재싱 및 일시 중지, 지속 시간, 볼륨 등을 설정할 수 있다.
+    오디오가 재생되기 시작하거나 일시 중지되는 경우를 알릴 수 있는 DOM 이벤트도 있다.
+    -->
+  </body>
+</html>
