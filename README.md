@@ -21,5 +21,3 @@ https://roadmap.sh/frontend
 
 - [Learn the basics](https://github.com/leejaeseong11/frontend-study/tree/main/HTML#learn-the-basics)
 ---
-
-https://www.w3schools.com/html/html_youtube.asp
