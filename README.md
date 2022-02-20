@@ -20,12 +20,6 @@ https://roadmap.sh/frontend
 2. [HTML](https://github.com/leejaeseong11/frontend-study/tree/main/HTML#html)
 
 - [Learn the basics](https://github.com/leejaeseong11/frontend-study/tree/main/HTML#learn-the-basics)
-- Writing Semantic HTML
-- Forms and Validation
-- Conventions and Best Practices
-- Accessibility
-- SEO Basics
-
 ---
 
 https://www.w3schools.com/html/html_youtube.asp
