@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!--
+    웹 저장소를 사용해 웹 응용 프로그램이 사용자의 브라우저 내에서 로컬로 데이터를 저장할 수 있다.
+    HTML5 이전에는 애플리케이션의 모든 데이터가 모든 서버 요청에 포함된 쿠키에 저장되어야 했다.
+    웹 저장소는 더 안전하고 웹 사이트 성능에 영향을 주지 않고 많은 양의 데이터를 로컬에 저장할 수 있다.
+    쿠키와 딜리 저장 제한이 훨씬 크고 정보가 서버로 전송되지 않는다.
+    웹 저장소는 원본 별로 저장되어, 한 출처의 모든 페이지는 동일한 데이터를 저장하고 액세스할 수 있다.
+
+    HTML 웹 스토리지는 클라이언트에게 데이터 저장을 위한 두 가지 객체를 제공한다.
+    - window.localStroage: 만료 날짜 없이 데이터를 저장
+    - window.sessionStorage: 한 세션에 대해 데이터를 저장(브라우저가 탭을 닫으면 데이터가 손실)
+    두 객체를 사용하기 전 브라우저의 지원을 먼저 확인해야 한다.
+    
+    localStroage 객체는 만료 날짜 없이 데이터를 저장한다.
+    데이터는 브라우저를 닫아도 삭제되지 않고, 언제든 사용할 수 있다.
+    -->
+    <div id="result"></div>
+    <script>
+      // Check browser support
+      if (typeof Storage !== "undefined") {
+        // Store
+        localStorage.setItem("lastname", "Smith"); // name="lastname" 및 value="Smith"로 localStorage 이름/값 쌍 생성
+        // 생성은 항상 문자열로 되어서 필요에 따라 변환해야 한다.
+        // Retrieve
+        document.getElementById("result").innerHTML =
+          localStorage.getItem("lastname"); // lastname을 검색하여 id="result" 요소에 삽입
+        /*
+        이렇게 작성하는 것도 가능하다.
+        // Store
+        localStorage.lastname = "Smith";
+        // Retrieve
+        document.getElementById("result").innerHTML = localStorage.lastname;
+
+        localStorage.removeItem("lastname"); // 삭제하는 방법이다.
+        */
+      } else {
+        document.getElementById("result").innerHTML =
+          "Sorry, your browser does not support Web Storage...";
+      }
+    </script>
+
+    <!-- localStorage를 활용한 카운터이다. -->
+    <div id="result2"></div>
+    <button onclick="clickCounter()">증가</button>
+    <script>
+      function clickCounter() {
+        if (typeof Storage !== "undefined") {
+          if (localStorage.clickcount) {
+            localStorage.clickcount = Number(localStorage.clickcount) + 1;
+          } else {
+            localStorage.clickcount = 1;
+          }
+          document.getElementById("result2").innerHTML =
+            "You have clicked the button " +
+            localStorage.clickcount +
+            " time(s).";
+        } else {
+          document.getElementById("result2").innerHTML =
+            "Sorry, your browser does not support web storage...";
+        }
+      }
+    </script>
+
+    <div id="result3"></div>
+    <button onclick="clickCounter2()">session storage 증가</button>
+    <!-- 
+    객체가 하나의 세션만을 저장한다는 점을 제외하면 sessionStorage도 동일하다.
+    사용자가 브라우저의 탭을 닫으면 데이터가 삭제된다.
+    -->
+
+    <script>
+      function clickCounter2() {
+        if (typeof Storage !== "undefined") {
+          if (sessionStorage.clickcount) {
+            sessionStorage.clickcount = Number(sessionStorage.clickcount) + 1;
+          } else {
+            sessionStorage.clickcount = 1;
+          }
+          document.getElementById("result3").innerHTML =
+            "You have clicked the button " +
+            sessionStorage.clickcount +
+            " time(s) in this session.";
+        } else {
+          document.getElementById("result3").innerHTML =
+            "Sorry, your browser does not support web storage...";
+        }
+      }
+    </script>
+  </body>
+</html>

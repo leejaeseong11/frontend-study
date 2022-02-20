@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!--
+    Geolocation API를 이용해 사용자의 위치를 찾는다.
+    getCurrentPosition()을 이용해 사용자의 위치를 반환할 수 있다.
+    -->
+    <p id="demo">위치 출력</p>
+    <button onclick="getLocation()">위치 받기</button>
+    <br />
+    <p id="demo2">실시간 위치</p>
+    <button onclick="getWatchLocation()">실시간 받기</button>
+    <!-- 
+    사용자의 위도와 경도를 반환하는 스크립트이다.
+    - 지리적 위치가 지원되는지 확인
+    - 지원되는 경우 getCurrentPosition() 실행하며, 그렇지 않은 경우 사용자에게 메시지 표시
+    - getCurrentPosition() 함수가 성공하면 지정된 함수에 좌표 객체 반환
+    - showPosition()으로 경도와 위도 출력
+    -->
+    <script>
+      var x = document.getElementById("demo");
+      function getLocation() {
+        if (navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition(showPosition, showError);
+        } else {
+          a;
+          x.innerHTML = "Geolocation is not supported by this browser.";
+        }
+      }
+
+      function showPosition(position) {
+        x.innerHTML =
+          "Latitude: " +
+          position.coords.latitude +
+          "<br>Longitude: " +
+          position.coords.longitude;
+      }
+
+      // showError() 함수는 에러를 처리하는 함수로 getCurrentPosition()의 매개변수로 전달하면 된다.
+      function showError(error) {
+        switch (error.code) {
+          case error.PERMISSION_DENIED:
+            x.innerHTML = "User denied the request for Geolocation.";
+            break;
+          case error.POSITION_UNAVAILABLE:
+            x.innerHTML = "Location information is unavailable.";
+            break;
+          case error.TIMEOUT:
+            x.innerHTML = "The request to get user location timed out.";
+            break;
+          case error.UNKNOWN_ERROR:
+            x.innerHTML = "An unknown error occurred.";
+            break;
+        }
+      }
+      /* 위치 정보는 최신 지역 정보, 사용자 주변의 관심 지점, GPS 등 유용하게 쓰일 수 있다.
+        getCurrentPosition()은 성공 시 위도, 경도 및 정확도가 항상 반환되며, 사용 가능한 경우 다른 속성이 반환된다.
+        다른 Geolocation 객체도 있다.
+        - watchPosition(): 사용자의 현재 위치를 반환하고 이동함에 따라 업데이트된 위치를 계속 반환
+        - clearWatch(): 메서드를 중지 */
+
+      var x2 = document.getElementById("demo2");
+      function getWatchLocation() {
+        if (navigator.geolocation) {
+          navigator.geolocation.watchPosition(showPosition2);
+        } else {
+          x2.innerHTML = "Geolocation is not supported by this browser.";
+        }
+      }
+
+      function showPosition2(position) {
+        x2.innerHTML =
+          "Latitude: " +
+          position.coords.latitude +
+          "<br>Longitude: " +
+          position.coords.longitude;
+      }
+    </script>
+  </body>
+</html>

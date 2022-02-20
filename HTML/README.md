@@ -107,7 +107,7 @@ HTML과의 차이는 아래와 같다.
 
 <form> 요소는 정보를 제출하기 위한 대화형 컨트롤을 포함하는 문서 구획이다.
 
-### Forms 👉 [코드](https://github.com/leejaeseong11/frontend-study/tree/main/HTML/Basics/Graphics)
+### Graphics 👉 [코드](https://github.com/leejaeseong11/frontend-study/tree/main/HTML/Basics/Graphics)
 
 HTML에서 그래픽을 그리기 위한 <canvas>와 vector 기반 그래픽을 나타내는 <svg>를 다룬다.
 

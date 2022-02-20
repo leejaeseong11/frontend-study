@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!--
+    SSE(Server Sent Event)를 이용해 웹 페이지가 서버에서 업데이트를 가져올 수 있다.
+    웹 페이지가 서버에서 자동으로 업데이트를 받는 경우 서버에서 이벤트를 보낸다.
+    웹 페이지에서 사용 가능한 업데이트가 있는지 물어야 한다. 서버에서 보낸 이벤트를 사용하면 자동으로 업데이트가 제공된다.
+    -->
+    <script>
+      // EventSource 객체로 서버에서 보낸 이벤트 알림을 수신할 수 있다.
+      var source = new EventSource("demo_sse.php");
+      source.onmessage = function (event) {
+        document.getElementById("result").innerHTML += event.data + "<br>";
+      };
+      // 브라우저에서 서버 전송 이벤트를 지원하는지 확인해야 한다.
+      if (typeof EventSource !== "undefined") {
+        // Yes! Server-sent events support!
+        // Some code.....
+      } else {
+        // Sorry! No server-sent events support..
+      }
+      // 데이터 업데이트를 보낼 서버가 필요하다.
+      // 서버측 이벤트 스트림 구문에서 "Content-Type" 헤더를 "text/event-stream"로 설정해야 이벤트 스트림 전송을 시작할 수있다.
+    </script>
+  </body>
+</html>
