@@ -1,8 +1,4 @@
-# frontend-study
-
-## roadmap
-
-https://roadmap.sh/frontend
+# internet and html
 
 ---
 
